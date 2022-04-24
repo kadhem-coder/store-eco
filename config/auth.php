@@ -40,6 +40,14 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'adminmerchant' => [
+            'driver' => 'session',
+            'provider' => 'adminmerchants',
+        ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -57,12 +65,20 @@ return [
     |
     | Supported: "database", "eloquent"
     |
-    */
+    */ 
 
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'adminmerchants' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Adminmerchant::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
         ],
 
         // 'users' => [
